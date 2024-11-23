@@ -60,3 +60,10 @@ class Snake:
         segment.penup()
         segment.goto(position)
         self.segments.append(segment)
+
+    def reset(self):
+        """Resets the Snake."""
+        for s in self.segments:
+            s.goto(1000, 1000)
+        self.segments.clear()
+        self.create_snake()
